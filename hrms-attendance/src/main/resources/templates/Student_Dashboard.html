@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - Magadh University</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for the Dashboard */
+    body {
+        background-color: #f4f6f9;
+    }
+    .navbar {
+        background-color: #4CAF50;
+    }
+    .navbar a {
+        color: white;
+        font-size: 18px;
+    }
+    .sidebar {
+        background-color: #333;
+        color: white;
+        padding-top: 20px;
+    }
+    .sidebar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        display: block;
+        border-bottom: 1px solid #555;
+    }
+    .sidebar a:hover {
+        background-color: #007bff;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .card {
+        border-radius: 10px;
+    }
+    .footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+           .mu{
+        font-size: 26px;
+font-weight: 400;
+margin-left: 15px;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/images/hrmslogo.png" alt="Magadh University" width="95" height="95" class="mr-2 ms-4">
+      <span class="mu">Magadh University HRMS</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsing Navbar content -->
+    <div class="collapse navbar-collapse mr-2" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="container">
+    <div class="row">
+      <!-- Dashboard Title -->
+      <div class="col-12 mb-4">
+        <h2 class="text-center">Welcome, Student Name</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- View Attendance -->
+      <div class="col-md-4">
+        <div class="card text-center bg-info text-white">
+          <div class="card-body">
+            <h5 class="card-title">View Attendance</h5>
+            <p class="card-text">Check your attendance records.</p>
+            <a href="/student/attendance" class="btn btn-light">View Attendance</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- View Marks -->
+      <div class="col-md-4">
+        <div class="card text-center bg-success text-white">
+          <div class="card-body">
+            <h5 class="card-title">View Marks</h5>
+            <p class="card-text">Check your exam results.</p>
+            <a href="/student/marks" class="btn btn-light">View Marks</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- View Profile -->
+      <div class="col-md-4">
+        <div class="card text-center bg-warning text-white">
+          <div class="card-body">
+            <h5 class="card-title">View Profile</h5>
+            <p class="card-text">Update your personal details.</p>
+            <a href="/student/profile" class="btn btn-light">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2024 Magadh University. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap 5 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
